@@ -23,7 +23,7 @@ const fetchBreedDetails = async (id: string): Promise<CatBreedDetail | null> => 
       headers: { "x-api-key": apiKey },
     });
 
-    if (!response.ok) throw new Error(`Failed to fetch breed details: ${response.status}`);
+    if (!response.ok) throw new Error(`Error Occurred`);
 
     const data = await response.json();
     return {
@@ -32,7 +32,7 @@ const fetchBreedDetails = async (id: string): Promise<CatBreedDetail | null> => 
       origin: data.origin,
       life_span: data.life_span,
       description: data.description,
-      image: data.reference_image_id ? { url: `https://cdn2.thecatapi.com/images/${data.reference_image_id}.jpg` } : undefined,
+      image:  { url: `https://cdn2.thecatapi.com/images/${data.reference_image_id}.jpg` } 
     };
   } catch (error) {
     console.error("Error fetching cat breed details:", error);

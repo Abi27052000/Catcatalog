@@ -15,11 +15,11 @@ const fetchBreeds = async (): Promise<CatBreed[]> => {
       headers: {
         "x-api-key": apiKey,
       },
-      cache: "no-store", // Prevents caching
+      cache: "no-store", 
     });
 
     if (!response.ok) {
-      throw new Error(`Failed to fetch: ${response.status}`);
+      throw new Error(`Error occurred`);
     }
 
     const data = await response.json();
