@@ -1,7 +1,7 @@
 **Cloning the Repository**
 
 ```bash
-git https://github.com/Abi27052000/Catcatalog.git
+git clone https://github.com/Abi27052000/Catcatalog.git
 cd cat
 ```
 
